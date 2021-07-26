@@ -4,11 +4,29 @@ import { useDialogPolyfill } from "./useDialogPolyfill";
 
 export default function Dialog({ closeOnOutsideClick, onRequestClose, open, ...props }) {
   const dialogRef = useRef(null);
-  const lastActiveElement = useRef(null);
-  const firstRender = useRef(true);
 
   useDialogPolyfill(dialogRef);
+  useDialogOpening(dialogRef, open);
+  useDialogClosing(dialogRef, onRequestClose);
 
+  function handleOutsideClick(event) {
+    const dialogNode = dialogRef.current;
+    if (closeOnOutsideClick && event.target === dialogNode) {
+      onRequestClose();
+    }
+  }
+
+  return (
+    <dialog id="dialog" ref={dialogRef} style={{ padding: 0 }} onClick={handleOutsideClick}>
+      <div {...props} />
+    </dialog>
+  );
+}
+
+
+const useDialogOpening = (dialogRef, open) => {
+  const lastActiveElement = useRef(null);
+  const firstRender = useRef(true);
   useEffect(() => {
     // polyfill will throw an error since we are not using the `open` attribute
     if (firstRender.current) {
@@ -24,7 +42,9 @@ export default function Dialog({ closeOnOutsideClick, onRequestClose, open, ...p
       }
     }
   }, [open]);
+};
 
+const useDialogClosing = (dialogRef, onRequestClose) => {
   useEffect(() => {
     const dialogNode = dialogRef.current;
     const handleCancel = event => {
@@ -36,17 +56,4 @@ export default function Dialog({ closeOnOutsideClick, onRequestClose, open, ...p
       dialogNode.removeEventListener("cancel", handleCancel);
     };
   }, [onRequestClose]);
-
-  function handleOutsideClick(event) {
-    const dialogNode = dialogRef.current;
-    if (closeOnOutsideClick && event.target === dialogNode) {
-      onRequestClose();
-    }
-  }
-
-  return (
-    <dialog ref={dialogRef} style={{ padding: 0 }} onClick={handleOutsideClick}>
-      <div {...props} />
-    </dialog>
-  );
-}
+};

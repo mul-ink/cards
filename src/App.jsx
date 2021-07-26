@@ -9,6 +9,7 @@ export default function App() {
   return (
     <div className={styles.appLayout}>
       <button
+        id="dialog-toggle"
         style={{
           background: "hsl(205, 80%, 50%)",
           color: "hsl(0, 0%, 100%)"
