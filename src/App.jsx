@@ -30,6 +30,7 @@ export default function App() {
           <h1>Hello Dialog</h1>
           <input />
           <button
+            id="close-dialog"
             style={{
               border: "1px solid hsl(205, 80%, 50%)",
               color: "hsl(205, 80%, 50%)"

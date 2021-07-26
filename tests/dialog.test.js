@@ -11,4 +11,10 @@ describe('Dialog behaviour', () => {
     await page.click('#dialog-toggle');
     await page.waitForSelector('#dialog', { visible: true});
   });
+    it('It is hidden when closed ', async () => {
+    await page.click('#dialog-toggle');
+    await page.waitForSelector('#dialog', { visible: true});
+    await page.click('#close-dialog');
+    await page.waitForSelector('#dialog', { hidden: true});
+  });
 });
