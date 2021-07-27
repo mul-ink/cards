@@ -1,5 +1,6 @@
 export default {
   exclude: [
+    '**/node_modules/**/*',
     '**/dist/**/*',
     '**/LICENSE',
     '**/package*.json',
@@ -7,7 +8,7 @@ export default {
     '**/screenshot.png',
     '**/snowpack.config.mjs',
     '**/jest-puppeteer.config.js',
-    '**/node_modules/**/*',
+    '**/tests/**/*',
   ],
   optimize: {
     bundle: true,
