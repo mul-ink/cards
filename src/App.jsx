@@ -19,6 +19,7 @@ export default function App() {
       >
         Open Dialog
       </button>
+      <CreditCard />
       <Dialog
         open={dialogOpen}
         onRequestClose={closeDialog}
