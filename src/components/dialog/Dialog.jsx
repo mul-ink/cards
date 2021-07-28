@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 import { useDialogPolyfill } from "./useDialogPolyfill";
+import styles from './dialog.module.css';
 
 export default function Dialog({ closeOnOutsideClick, onRequestClose, open, ...props }) {
   const dialogRef = useRef(null);
@@ -17,7 +18,7 @@ export default function Dialog({ closeOnOutsideClick, onRequestClose, open, ...p
   }
 
   return (
-    <dialog id="dialog" ref={dialogRef} style={{ padding: 0 }} onClick={handleOutsideClick}>
+    <dialog id="dialog" ref={dialogRef} className={styles.dialog} onClick={handleOutsideClick}>
       <div {...props} />
     </dialog>
   );

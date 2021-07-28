@@ -1,5 +1,7 @@
 .dialog {
   padding: 0;
+  border-color: transparent;
+  border-radius: (--spacing-04);
 }
 
 dialog::backdrop {

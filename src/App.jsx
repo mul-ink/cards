@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Dialog from "./components/dialog/Dialog.jsx";
 import styles from "./app.module.css";
-import CreditCard from "./components/creditCard/CreditCardForm";
+import CreditCard from "./components/creditCardForm/CreditCardForm";
+import CardPlate from "./components/creditCardPlate/Card.jsx";
+import CardList from "./CardsList.jsx";
 
 export default function App() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -9,6 +11,8 @@ export default function App() {
   const closeDialog = () => setDialogOpen(false);
   return (
     <div className={styles.appLayout}>
+      <CardList />
+      <CreditCard />
       <button
         id="dialog-toggle"
         style={{
@@ -19,7 +23,6 @@ export default function App() {
       >
         Open Dialog
       </button>
-      <CreditCard />
       <Dialog
         open={dialogOpen}
         onRequestClose={closeDialog}
