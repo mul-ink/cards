@@ -18,7 +18,7 @@ export default function Dialog({ closeOnOutsideClick, onRequestClose, open, ...p
   }
 
   return (
-    <dialog id="dialog" ref={dialogRef} className={styles.dialog} onClick={handleOutsideClick}>
+    <dialog ref={dialogRef} className={styles.dialog} onClick={handleOutsideClick}>
       <div {...props} />
     </dialog>
   );

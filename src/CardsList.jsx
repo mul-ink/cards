@@ -10,8 +10,7 @@ export default function CardList() {
   console.log('ddata2', data);
 	return (
 		<div className={styles.cardListLayout}>
-			<CardPlate />
-			<CardPlate />
+			{ data.map((card) => <CardPlate card={card}/>)}
 		</div>
 	);
 }

@@ -15,6 +15,7 @@
     --border-radius-01: 16px;
     --border-radius-02: 24px;
     --border-radius-03: 100px;
+    --border-radius-card: 34px;
     --accent-1: #4C00C2;
     --accent-2: #32007E;
     --accent-3: #3B058E;
@@ -27,4 +28,8 @@
     --text-primary: #1A212C;
     --accent-positive: #19AC51;
     --accent-negative: #FC484C;
+    --font-size-card-name: 35px;
+    --font-size-card-holder: 24px;
+    --font-size-card-number: 28px;
+    --font-weight-card: 700;
   }

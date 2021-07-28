@@ -10,7 +10,7 @@ export default function CreditCardForm() {
     console.log(formRef.current.reportValidity())
   };
   return (
-    <form ref={formRef} id="form" noValidate="novalidate" onSubmit={onSubmit}>
+    <form aria-label="Add credit card" ref={formRef} noValidate="novalidate" onSubmit={onSubmit}>
       <CardNameHolder />
       <CardNumber />
       <CardExpiration />
