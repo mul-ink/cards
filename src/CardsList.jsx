@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styles from './app.module.css';
 import CardPlate from './components/creditCardPlate/Card.jsx';
 
 export default function CardList() {
-	let [cards, setCards] = useState([]);
+  const [data, setData] = React.useState([]);
 	useEffect(() => {
-		fetch('/api/users')
-			.then((response) => response.json())
-			.then((json) => setUsers(json));
-	}, []);
+		fetch('/api/cards').then((res) => res.json().then(setData))
+  }, []);
+  console.log('ddata2', data);
 	return (
 		<div className={styles.cardListLayout}>
 			<CardPlate />

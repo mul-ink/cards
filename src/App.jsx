@@ -3,6 +3,9 @@ import Dialog from "./components/dialog/Dialog.jsx";
 import styles from "./app.module.css";
 import CreditCard from "./components/creditCardForm/CreditCardForm";
 import CardList from "./CardsList.jsx";
+import { startMirage } from './mirage';
+
+startMirage();
 
 export default function App() {
   const [dialogOpen, setDialogOpen] = useState(false);
