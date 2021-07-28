@@ -6,8 +6,7 @@
   "scripts": {
     "build": "snowpack build --reload --clean",
     "test": "jest --runInBand",
-    "start": "snowpack dev",
-    "deploy": "gh-pages -d build --repo git@github.com:mul-ink/mul-ink.github.io.git"
+    "start": "snowpack dev"
   },
   "author": "",
   "license": "ISC",
