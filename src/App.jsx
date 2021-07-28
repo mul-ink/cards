@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dialog from "./components/dialog/Dialog.jsx";
 import styles from "./app.module.css";
-import CreditCard from "./CreditCard";
+import CreditCard from "./components/creditCard/CreditCardForm";
 
 export default function App() {
   const [dialogOpen, setDialogOpen] = useState(false);
