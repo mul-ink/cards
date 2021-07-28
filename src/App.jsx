@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Dialog from "./components/dialog/Dialog.jsx";
 import styles from "./app.module.css";
 import CreditCard from "./components/creditCardForm/CreditCardForm";
-import CardPlate from "./components/creditCardPlate/Card.jsx";
 import CardList from "./CardsList.jsx";
 
 export default function App() {
