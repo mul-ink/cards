@@ -6,9 +6,8 @@ import CardPlate from './components/creditCardPlate/Card.jsx';
 
 export default function CardList() {
   const { data, error } = useSWR('/api/cards', fetcher);
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
-  console.log('ddata23', data);
+  if (error) return <div role="alert" aria-label="Error Loading">failed to load</div>
+  if (!data) return <div role="alert" aria-label="Loading">loading...</div>
 	return (
 		<div className={styles.cardListLayout}>
 			{ data.map((card) => <CardPlate key={card.id} card={card}/>)}
