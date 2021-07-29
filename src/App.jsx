@@ -3,9 +3,8 @@ import Dialog from "./components/dialog/Dialog.jsx";
 import styles from "./app.module.css";
 import CreditCard from "./components/creditCardForm/CreditCardForm";
 import CardList from "./CardsList.jsx";
-import { startMirage } from './mirage';
+import AddCard from './AddCard';
 
-startMirage();
 
 export default function App() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -15,16 +14,7 @@ export default function App() {
     <div className={styles.appLayout}>
       <CardList />
       <CreditCard />
-      <button
-        id="dialog-toggle"
-        style={{
-          background: "hsl(205, 80%, 50%)",
-          color: "hsl(0, 0%, 100%)",
-        }}
-        onClick={toggleDialog}
-      >
-        Open Dialog
-      </button>
+      <AddCard toggleDialog={toggleDialog}/>
       <Dialog
         open={dialogOpen}
         onRequestClose={closeDialog}

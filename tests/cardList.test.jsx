@@ -1,25 +1,15 @@
 const {getDocument, queries} = require('pptr-testing-library')
 const {getByText} = queries
 const { APP_URL } = require('./consts');
-// const { createServer, Response } = require('miragejs')
 
-// let server;
-// let document;
+let document;
 
 describe('Card list', () => {
-  let document;
   beforeEach(async () => {
-    // server = createServer();
-    document = await getDocument(page)
     await page.goto(APP_URL);
+    document = await getDocument(page)
   });
-  // afterEach(() => {
-  //   server.shutdown()
-  // })
   it('displays loading at first', async () => {
-    loading = await getByText(document, 'loading...');
-  });
-  it('shows error on API error', async () => {
-    await getByRole(document, 'alert')
+    await getByText(document, 'loading...');
   });
 });
