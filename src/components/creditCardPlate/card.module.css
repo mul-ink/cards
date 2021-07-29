@@ -1,8 +1,6 @@
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 100px;
-    margin-top: var(--spacing-07);
 }
 
 .cardPlate {

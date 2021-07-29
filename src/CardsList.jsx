@@ -1,6 +1,6 @@
 import React from 'react';
 import useSWR from 'swr';
-import styles from './app.module.css';
+import styles from './cardList.module.css';
 import Card from './Card';
 
 
@@ -10,7 +10,7 @@ export default function CardList() {
   if (!data) return <div role="alert" aria-label="Loading">loading...</div>
 	return (
 		<div className={styles.cardListLayout}>
-			{ data.map((card) => <Card key={card.id} card={card}/>)}
+			{ data.map((card) => <div key={card.id} className={styles.card}><Card key={card.id} card={card}/></div>)}
 		</div>
 	);
 }

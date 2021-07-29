@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Lineto';
+    src: url(/lineto-circular-pro-book.ttf) format("truetype");
+}
+
 body {
     margin: 0;
+    font-family: 'Lineto';
 }
 
 button {

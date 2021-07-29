@@ -2,7 +2,7 @@
     --spacing-01: 4px;
     --spacing-02: 8px;
     --spacing-03: 16px;
-    --spacing-04: 24x;
+    --spacing-04: 24px;
     --spacing-05: 32px;
     --spacing-06: 40px;
     --spacing-07: 48px;
@@ -33,4 +33,6 @@
     --font-size-card-number: 28px;
     --font-weight-card: 700;
     --button-width: 2rem;
+    --card-width: 5rem;
+    --card-height: 3rem;
   }
