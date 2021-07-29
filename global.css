@@ -1,3 +1,11 @@
 body {
     margin: 0;
 }
+
+button {
+    height: var(--spacing-04);
+    padding-right: var(--spacing-05);
+    padding-left: var(--spacing-03);
+    background: var(--accent-1);
+    color: var(--ui-02);
+}

@@ -4,7 +4,7 @@ import { useDialogPolyfill } from "./useDialogPolyfill";
 import styles from './dialog.module.css';
 
 export default function Dialog({ closeOnOutsideClick, onRequestClose, open, ...props }) {
-  const dialogRef = useRef(null);
+  const dialogRef = useRef();
 
   useDialogPolyfill(dialogRef);
   useDialogOpening(dialogRef, open);
