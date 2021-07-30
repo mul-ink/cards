@@ -17,10 +17,6 @@ export default function CreditCardForm({ closeDialog }) {
   const cardCodeRef = useRef();
   const cardExpirationRef = useRef();
 
-  const onChange = () => {
-    console.log('name change ', cardNameHolderRef.current.validity)
-  }
-
   return (
     <form className={styles.creditCardForm} title="Add credit card" aria-label="Add credit card" ref={formRef} noValidate onSubmit={onSubmit}>
       <br/>
@@ -29,7 +25,6 @@ export default function CreditCardForm({ closeDialog }) {
       <input
         required
         ref={cardNameHolderRef}
-        onChange={onChange}
         id="cc-name"
         name="cc-name"
         type="text"
