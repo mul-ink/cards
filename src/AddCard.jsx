@@ -19,25 +19,9 @@ export default function AddCard({ toggleDialog, dialogOpen, closeDialog }) {
         onRequestClose={closeDialog}
         closeOnOutsideClick
       >
-        <div
-          style={{
-            display: "grid",
-            gridGap: "1em",
-            justifyItems: "center",
-            padding: "1em",
-          }}
-        >
+        <div className={styles.addCardContent}>
+          <h1>Add your card details</h1>
           <CreditCard />
-          <button
-            id="close-dialog"
-            style={{
-              border: "1px solid hsl(205, 80%, 50%)",
-              color: "hsl(205, 80%, 50%)",
-            }}
-            onClick={closeDialog}
-          >
-            Close
-          </button>
         </div>
       </Dialog>
     </>

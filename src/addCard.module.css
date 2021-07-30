@@ -1,4 +1,9 @@
 .addCard {
-    background: var(--accent-1);
-    color: var(--ui-02);
+    margin-top: var(--spacing-06);
+}
+
+.addCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

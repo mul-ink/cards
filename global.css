@@ -9,9 +9,12 @@ body {
 }
 
 button {
-    height: var(--spacing-04);
+    width: var(--button-width);
+    height: var(--button-height);
     padding-right: var(--spacing-05);
     padding-left: var(--spacing-03);
     background: var(--accent-1);
     color: var(--ui-02);
+    font-size: var(--font-size-button);
+    border-radius: var(--border-radius-03);
 }

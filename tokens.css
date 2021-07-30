@@ -31,8 +31,9 @@
     --font-size-card-name: 35px;
     --font-size-card-holder: 24px;
     --font-size-card-number: 28px;
+    --font-size-button: 20px;
     --font-weight-card: 700;
-    --button-width: 2rem;
-    --card-width: 5rem;
-    --card-height: 3rem;
+    --button-width: 200px;
+    --button-height: 48px;
+    --dialog-width: 100vw;
   }
