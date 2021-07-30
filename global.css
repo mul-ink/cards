@@ -13,8 +13,55 @@ button {
     height: var(--button-height);
     padding-right: var(--spacing-05);
     padding-left: var(--spacing-03);
-    background: var(--accent-1);
+    background: var(--accent-3);
     color: var(--ui-02);
     font-size: var(--font-size-button);
     border-radius: var(--border-radius-03);
+    margin-bottom: var(--spacing-06);
+    cursor: pointer;
+}
+
+button:disabled {
+    width: var(--button-width);
+    height: var(--button-height);
+    padding-right: var(--spacing-05);
+    padding-left: var(--spacing-03);
+    background: var(--ui-01);
+    color: var(--ui-02);
+    font-size: var(--font-size-button);
+    border-radius: var(--border-radius-03);
+    margin-bottom: var(--spacing-06);
+    cursor: not-allowed;
+    border: transparent;
+}
+
+label {
+    font-size: var(--font-size-label);
+    margin-bottom: var(--spacing-03);
+}
+
+input {
+    font-size: var(--font-size-input);
+    margin-bottom: var(--spacing-07);
+    border-color: transparent;
+}
+
+input:valid {
+    font-size: var(--font-size-input);
+    margin-bottom: var(--spacing-07);
+    border-color: transparent;
+    border-bottom-width: 3px;
+    border-bottom-color: var(--accent-positive);
+}
+
+input:user-invalid {
+    font-size: var(--font-size-input);
+    margin-bottom: var(--spacing-07);
+    border-color: transparent;
+    border-bottom-width: 3px;
+    border-bottom-color: var(--accent-negative);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
 }
