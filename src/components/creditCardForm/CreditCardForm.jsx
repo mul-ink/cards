@@ -20,7 +20,7 @@ export default function CreditCardForm({ closeDialog }) {
   return (
     <form className={styles.creditCardForm} title="Add credit card" aria-label="Add credit card" ref={formRef} noValidate onSubmit={onSubmit}>
       <br/>
-      <h1>Add your card details</h1>
+      <h1>Add your credit card details</h1>
       <label htmlFor="cc-name">Name in card</label>
       <input
         required
