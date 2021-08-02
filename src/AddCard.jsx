@@ -1,7 +1,6 @@
 import React from 'react';
 import Dialog from "./components/dialog/Dialog.jsx";
 import CreditCard from "./components/creditCardForm/CreditCardForm";
-import styles from './addCard.module.css';
 
 
 export default function AddCard({ toggleDialog, dialogOpen, closeDialog }) {
@@ -9,7 +8,6 @@ export default function AddCard({ toggleDialog, dialogOpen, closeDialog }) {
     return (
     <>
       <button
-        className={styles.addCard}
         onClick={toggleDialog}
       >
         Add Credit Card
@@ -19,10 +17,7 @@ export default function AddCard({ toggleDialog, dialogOpen, closeDialog }) {
         onRequestClose={closeDialog}
         closeOnOutsideClick
       >
-        <div className={styles.addCardContent}>
-          <h1>Add your credit card details</h1>
-          <CreditCard />
-        </div>
+        <CreditCard closeDialog={closeDialog} />
       </Dialog>
     </>
     );

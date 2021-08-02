@@ -1,11 +1,12 @@
 .dialog {
   padding: 0;
   border-color: transparent;
-  border-radius: var(--border-radius-01);
+  border-top-left-radius: var(--border-radius-02);
+  border-top-right-radius: var(--border-radius-02);
   width: 100vw;
   margin: 500px 0 0 16px;
-  height: 100vh;
   overflow: auto;
+  margin-top: auto;
 }
 
 dialog::backdrop {

@@ -1,9 +1,0 @@
-.addCard {
-    margin-top: var(--spacing-06);
-}
-
-.addCardContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
