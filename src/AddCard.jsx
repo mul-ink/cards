@@ -12,7 +12,7 @@ export default function AddCard({ toggleDialog, dialogOpen, closeDialog }) {
         className={styles.addCard}
         onClick={toggleDialog}
       >
-        Add Card
+        Add Credit Card
       </button>
       <Dialog
         open={dialogOpen}
@@ -20,7 +20,7 @@ export default function AddCard({ toggleDialog, dialogOpen, closeDialog }) {
         closeOnOutsideClick
       >
         <div className={styles.addCardContent}>
-          <h1>Add your card details</h1>
+          <h1>Add your credit card details</h1>
           <CreditCard />
         </div>
       </Dialog>
